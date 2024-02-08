@@ -14,6 +14,17 @@ pub fn solve_ita< H: Heuristic, G: Puzzle24Grid >( h: &H, p: G ) -> (usize, Vec<
   (num_steps, path)
 }
 
+pub fn solve_dfs< H: Heuristic, G: Puzzle24Grid >( h: &H, p: G, max_depth: u8 ) -> (usize, Option< Vec< Dir > >) {
+  let mut stack = DfsStack::uninit( );
+  let (is_solved, num_steps) = solve_dfs_state( &mut stack, h, p, max_depth );
+  let path =
+    if is_solved {
+      Some( stack.inv_path.into_iter( ).map( |x| x.inv( ) ).collect( ) )
+    } else {
+      None
+    };
+  (num_steps, path)
+}
 
 ///
 /// Invariant: grid[ gap_cell ] contains tile 0
