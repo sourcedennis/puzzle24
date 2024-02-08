@@ -142,6 +142,10 @@ impl< G: Puzzle24Grid > DfsStack< G > {
     DfsStack { stack: Vec::with_capacity( 256 ), inv_path: Vec::with_capacity( 255 ) }
   }
 
+  pub fn inv_path( &self ) -> &[Dir] {
+    &self.inv_path
+  }
+
   pub fn init( &mut self, frame_puzzle: Puzzle24< G > ) {
     self.stack.clear( );
     self.inv_path.clear( );
