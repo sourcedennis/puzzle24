@@ -36,6 +36,11 @@ impl< G: Puzzle24Grid > Puzzle24< G > {
   }
 
   #[inline]
+  pub fn grid( &self ) -> &G {
+    &self.grid
+  }
+
+  #[inline]
   pub fn step_inv( &self, inv_dir: Dir ) -> Option< Self > {
     debug_assert!( self.grid.get_tile( self.gap_cell ) == PuzzleTile::GAP );
     let adj_cell = self.gap_cell.step( inv_dir )?;
