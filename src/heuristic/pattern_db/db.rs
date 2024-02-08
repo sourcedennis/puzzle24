@@ -234,6 +234,11 @@ impl DefaultPatternDB {
     assert!( default_pattern0.len( ) == 244_140_625 && default_pattern1.len( ) == 244_140_625 );
     DefaultPatternDB { default_pattern0, default_pattern1 }
   }
+
+  #[inline]
+  pub fn patterns( &self ) -> (&[u8], &[u8]) {
+    (&self.default_pattern0, &self.default_pattern1)
+  }
 }
 
 impl Heuristic for DefaultPatternDB {
