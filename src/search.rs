@@ -28,6 +28,7 @@ pub fn solve_dfs< H: Heuristic, G: Puzzle24Grid >( h: &H, p: G, max_depth: u8 ) 
 
 ///
 /// Invariant: grid[ gap_cell ] contains tile 0
+#[derive(Clone)]
 pub struct Puzzle24< G: Puzzle24Grid > {
   grid: G,
   gap_cell: PuzzleCell
