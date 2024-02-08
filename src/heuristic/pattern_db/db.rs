@@ -231,6 +231,7 @@ impl DefaultPatternDB {
   /// gives the opportunity to store them to disk.
   #[inline]
   pub fn new( default_pattern0: Vec< u8 >, default_pattern1: Vec< u8 > ) -> Self {
+    assert!( default_pattern0.len( ) == 244_140_625 && default_pattern1.len( ) == 244_140_625 );
     DefaultPatternDB { default_pattern0, default_pattern1 }
   }
 }
@@ -255,5 +256,12 @@ impl Heuristic for DefaultPatternDB {
     // both `dis_a` and `dis_b` are (independently) admissible heuristic values
     // so take their maximum
     dis_a.max( dis_b )
+  }
+}
+
+impl From< DefaultPatternDB > for (Vec< u8 >, Vec< u8 >) {
+  #[inline]
+  fn from( v: DefaultPatternDB ) -> Self {
+    ( v.default_pattern0, v.default_pattern1 )
   }
 }
