@@ -11,3 +11,7 @@ Additionally, we take the sample puzzles from:
 * *Finding Optimal Solutions to the Twenty-Four Puzzle* (1996), by Richard E. Korf and Larry A. Taylor
 
 Otherwise, this library contains many low-level optimizations.
+
+## License
+
+BSD-3 - See the `LICENSE` file

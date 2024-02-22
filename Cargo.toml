@@ -1,6 +1,11 @@
 [package]
 name = "puzzle24"
-version = "0.1.0"
+authors = ["Dennis Sprokholt <me@dennis.life>"]
+description = "mushroom"
+readme = "README.md"
+license = "BSD-3"
+repository = "https://github.com/sourcedennis/puzzle24"
 edition = "2021"
+version = "0.1.0"
 
 [dependencies]
