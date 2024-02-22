@@ -14,4 +14,4 @@ Otherwise, this library contains many low-level optimizations.
 
 ## License
 
-BSD-3 - See the `LICENSE` file
+MIT - See the `LICENSE` file
