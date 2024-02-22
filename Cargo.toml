@@ -1,7 +1,7 @@
 [package]
 name = "puzzle24"
 authors = ["Dennis Sprokholt <me@dennis.life>"]
-description = "mushroom"
+description = "Library for solving Twenty-Four Sliding Puzzles"
 readme = "README.md"
 license = "BSD-3"
 repository = "https://github.com/sourcedennis/puzzle24"
